@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funnel Blueprint · For Heather · AG1</title>
+<meta name="description" content="Funnel Blueprint - built for Heather Lindsey by AG1 Consulting.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Funnel Blueprint · For Heather">
+<meta property="og:description" content="Part of the funnel audit + less-than-7-day install plan built for @thebusytrader by AG1 Consulting.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script defer data-domain="andrei170.github.io" src="https://plausible.io/js/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="docs.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-back"><span class="arrow">&larr;</span> Back to Hub</a>
+    <span class="nav-title">For Heather · AG1</span>
+  </div>
+</nav>
+
+<article class="doc">
+  <header class="doc-header">
+    <span class="doc-tag">Architecture</span>
+    <h1>Funnel Blueprint - Heather Lindsey</h1>
+  </header>
+
+  
+<p><strong>Architecture deliverable</strong> · Current state, target state, full funnel diagram, phase mapping, tech stack, integration points.</p>
+<hr />
+<h2>Current State (as of 2026-05-10, public surfaces)</h2>
+<pre><code>ENTRY POINTS
+├── @thebusytrader IG (~69K) ────────────────────┐
+├── Word of mouth + Discord referrals ───────────┤
+├── Search (organic, &quot;the busy trader&quot;) ─────────┤
+└── (No paid acquisition observable) ────────────┘
+                              ↓
+                    home.thebusytraders.com
+                    (course grid, no homepage VSL)
+                              ↓
+              ┌── Free &quot;$500 A Day Trading Stocks&quot; Masterclass ──┐
+              │   (gated opt-in, no observable nurture after)    │
+              └────────────────────┬─────────────────────────────┘
+                                   ↓
+                          (cold drop-off here)
+                                   ↓
+                          ┌────────┴────────┐
+                          ↓                 ↓
+                  Buys Level 1         Returns to homepage
+                  ($624)               or leaves
+                          ↓
+                  Up the ladder (course-by-course)
+                          ↓
+                  Bundle ($2,996) - top of public ladder
+                          ↓
+                  (1:1 coaching SKUs gated behind portal,
+                   no public price, no positioning)
+                          ↓
+                  (No high-ticket mentorship layer above)
+</code></pre>
+<p>Three structural gaps: no homepage VSL, no masterclass-to-Level-1 nurture, no high-ticket Inner Circle above the bundle.</p>
+<hr />
+<h2>Target State (post-install, less than 7 days from kickoff)</h2>
+<pre><code>ENTRY POINTS
+├── @thebusytrader IG (~69K) ────────────────────┐
+├── Word of mouth + Discord referrals ───────────┤
+├── Search (organic) ────────────────────────────┤
+└── Paid acquisition (Phase 4, post-install) ────┘
+                              ↓
+                    home.thebusytraders.com
+                    (HOMEPAGE VSL above the course grid)
+                              ↓
+              ┌──── Free &quot;$500 A Day&quot; MASTERCLASS ──────┐
+              │     (gated opt-in, captures email)      │
+              └────────────────────┬────────────────────┘
+                                   ↓
+                  8-TOUCH NURTURE (14 days, segmented)
+                                   ↓
+                          ┌────────┴────────┐
+                          ↓                 ↓
+                  Buys Level 1         Returns to nurture
+                  ($624)               or holds
+                          ↓
+                  Level 2 ($724) → Labs 1 ($824) → Labs 2 ($824)
+                          ↓
+                  Bundle ($2,996) - top of course ladder
+                          ↓
+                  BUNDLE GRADUATE NURTURE (30-day)
+                          ↓
+                  THE BUSY TRADER INNER CIRCLE
+                  ($15K-$25K/yr, application, capped cohort,
+                   quarterly retreats, monthly Heather calls)
+
+PARALLEL TRACK
+Money Meeting buyers ($324) → Inner Circle waitlist via family-wealth on-ramp
+Discord regulars → Inner Circle waitlist via post-purchase nurture
+30-day bootcamp graduates → Inner Circle direct application (skip waitlist)
+</code></pre>
+<hr />
+<h2>Phase Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Phase</th>
+<th>Owner</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inner Circle landing page</td>
+<td>1</td>
+<td>AG1</td>
+<td>Webflow / custom HTML, hosted alongside Kartra</td>
+</tr>
+<tr>
+<td>Inner Circle application form</td>
+<td>1</td>
+<td>AG1</td>
+<td>Typeform</td>
+</tr>
+<tr>
+<td>Inner Circle pricing page (intake-only, gated)</td>
+<td>1</td>
+<td>AG1</td>
+<td>Kartra page</td>
+</tr>
+<tr>
+<td>Homepage VSL recut</td>
+<td>1</td>
+<td>AG1 + Heather</td>
+<td>Wistia or YouTube unlisted, recut from masterclass footage</td>
+</tr>
+<tr>
+<td>Homepage layout update (VSL above course grid)</td>
+<td>1</td>
+<td>AG1</td>
+<td>Kartra page edit</td>
+</tr>
+<tr>
+<td>Masterclass post-attendance trigger (8-touch sequence)</td>
+<td>2</td>
+<td>AG1</td>
+<td>Kartra Sequences</td>
+</tr>
+<tr>
+<td>Segment by attendance state (live / replay / no-show)</td>
+<td>2</td>
+<td>AG1</td>
+<td>Kartra tags + automation</td>
+</tr>
+<tr>
+<td>Bundle graduate nurture (30-day)</td>
+<td>2</td>
+<td>AG1</td>
+<td>Kartra Sequences</td>
+</tr>
+<tr>
+<td>Discord pinned post + Inner Circle waitlist link</td>
+<td>2</td>
+<td>AG1 + Heather</td>
+<td>Discord native</td>
+</tr>
+<tr>
+<td>Inner Circle pre-launch content (4-week pre-frame)</td>
+<td>3</td>
+<td>AG1 + Heather</td>
+<td>IG + YouTube + email</td>
+</tr>
+<tr>
+<td>Quarterly retreat logistics + venue</td>
+<td>3</td>
+<td>Heather + AG1</td>
+<td>Local venue booking</td>
+</tr>
+<tr>
+<td>Paid acquisition (Meta + YouTube)</td>
+<td>4</td>
+<td>AG1</td>
+<td>Meta Ads + Google Ads</td>
+</tr>
+</tbody>
+</table>
+<h2>Tech Stack (recommended, layered on existing)</h2>
+<ul>
+<li><strong>Course host:</strong> Kartra (existing, keep it)</li>
+<li><strong>Landing pages:</strong> Custom HTML via Kartra page wrapper (Inner Circle), Kartra-native (homepage update)</li>
+<li><strong>Email:</strong> Kartra Sequences (existing - extend, do not replace)</li>
+<li><strong>Quiz / segmentation:</strong> Typeform for Inner Circle application</li>
+<li><strong>Payment:</strong> Kartra checkout (existing) for course tiers, Stripe for Inner Circle annual + retreat top-ups</li>
+<li><strong>Video host:</strong> YouTube unlisted (homepage VSL, fast load) or Wistia (control + analytics)</li>
+<li><strong>Analytics:</strong> GA4 + Meta Pixel + Microsoft Clarity (heatmaps for the new homepage)</li>
+<li><strong>Community (Inner Circle):</strong> Skool (preferred - low overhead) or private Discord channel</li>
+<li><strong>Scheduling:</strong> Calendly for Inner Circle intake call</li>
+<li><strong>Project / build:</strong> Notion (handover-friendly)</li>
+</ul>
+<h2>Integration Points</h2>
+<ol>
+<li>Masterclass opt-in → Kartra tag "masterclass-registered" + state tag (live / replay / no-show)</li>
+<li>Kartra tag → Sequence trigger - 8-touch nurture starts T+0 from attendance state</li>
+<li>Level 1 purchase → suppress nurture, trigger course-onboarding sequence</li>
+<li>Bundle purchase → trigger 30-day bundle-graduate nurture toward Inner Circle waitlist</li>
+<li>Inner Circle Typeform submit → Calendly intake call + Heather email notification</li>
+<li>Money Meeting buyer → cross-sell tag, surface Inner Circle waitlist on completion</li>
+<li>Discord post-purchase → static pinned link to Inner Circle waitlist</li>
+<li>All conversion events → GA4 + Meta Pixel via GTM for full attribution</li>
+</ol>
+<h2>Owner Map</h2>
+<ul>
+<li><strong>Heather:</strong> filming (homepage VSL recut session), Inner Circle intake calls, monthly group calls with the cohort, quarterly retreat content lead, top-line decisions on copy + brand</li>
+<li><strong>AG1:</strong> everything else - landing page build, email writing, Kartra automation setup, Discord pinned-post copy, content production cycles, ads management (Phase 4), weekly reporting</li>
+</ul>
+<h2>Failure Modes + Mitigations</h2>
+<ul>
+<li><strong>Homepage VSL filming delays</strong> → recut existing masterclass footage as Phase 1 placeholder; replace with custom 4-7 min recording inside the first 30 days of go-live</li>
+<li><strong>Inner Circle cohort under-fills first round</strong> → seed founding cohort from bundle graduates + Discord regulars at a slightly reduced first-cohort rate to lock in case studies; raise to full price for cohort 2</li>
+<li><strong>Kartra sequence builder learning curve</strong> → AG1 builds and documents the 8-touch sequence in Kartra-native, hands over with a 30-min walkthrough recording</li>
+<li><strong>Quarterly retreat venue cost overrun</strong> → start with a single 2-day retreat at a hotel conference suite (low overhead) before scaling to full week-long destination retreats in Year 2</li>
+</ul>
+<h2>KPIs (90-day)</h2>
+<ul>
+<li>Phase 1 · Inner Circle landing live · 6-10 applications in first 30 days · 3-6 founding cohort members signed</li>
+<li>Phase 1 · Homepage VSL live · cold-traffic-to-Level-1 conversion lift measured against 30-day baseline</li>
+<li>Phase 2 · 8-touch nurture live · masterclass-to-Level-1 conversion rate measured at day 14 and day 30</li>
+<li>Phase 3 · 4-week pre-launch content shipped · Inner Circle waitlist target 50-80 signups</li>
+<li>Year-1 floor target · $230K-$440K incremental on top of existing course revenue</li>
+</ul>
+
+  <footer class="doc-footer">
+    <a href="index.html" class="doc-footer-link">Back to Hub</a>
+    <div class="doc-meta">Prepared 2026-05-10 &middot; Built for @thebusytrader</div>
+  </footer>
+</article>
+
+</body>
+</html>
